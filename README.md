@@ -7,35 +7,35 @@ Generate beautiful gradient avatars for your application.
 Provide a username to generate an avatar. Each name will generate a unique `avatar`. Just replace `rauchg` with an `username` or `email`:
 
 ```
-https://avatar.vercel.sh/rauchg
+https://avatars.vocayo.ai/api/avatar/rauchg
 ```
 
-You will receive a `png` image with a size of 120\*120px
+You will receive a `png` image with a size of 600\*600px
 
-![Avatar for rauchg](https://avatar.vercel.sh/rauchg)
+![Avatar for rauchg](https://avatars.vocayo.ai/api/avatar/rauchg)
 
 ### Adjust Roundness
 
 ```
-https://avatar.vercel.sh/rauchg?rounded=60
+https://avatars.vocayo.ai/api/avatar/rauchg?rounded=60
 ```
 
-![Avatar for rauchg](https://avatar.vercel.sh/rauchg?rounded=60)
+![Avatar for rauchg](https://avatars.vocayo.ai/api/avatar/rauchg?rounded=60)
 
 ### Custom Size
 
 ```
-https://avatar.vercel.sh/rauchg?size=30
+https://avatars.vocayo.ai/api/avatar/rauchg?size=30
 ```
 
-![Avatar for rauchg](https://avatar.vercel.sh/rauchg?size=30)
+![Avatar for rauchg](https://avatars.vocayo.ai/api/avatar/rauchg?size=30)
 
 ### SVG
 
 Add the extension `.svg`:
 
 ```
-https://avatar.vercel.sh/rauchg.svg
+https://avatars.vocayo.ai/api/avatar/rauchg.svg
 ```
 
 ### Add Initials
@@ -43,7 +43,7 @@ https://avatar.vercel.sh/rauchg.svg
 Add the `text` parameter (requires SVG):
 
 ```
-https://avatar.vercel.sh/rauchg.svg?text=GR
+https://avatars.vocayo.ai/api/avatar/rauchg.svg?text=GR
 ```
 
-![Avatar for rauchg](https://avatar.vercel.sh/rauchg.svg?text=GR)
+![Avatar for rauchg](https://avatars.vocayo.ai/api/avatar/rauchg.svg?text=GR)
