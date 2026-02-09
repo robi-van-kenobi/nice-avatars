@@ -1,6 +1,8 @@
-# avatar ![](https://avatar.vercel.sh/rauchg?size=20) ![](https://avatar.vercel.sh/leerob?size=20) ![](https://avatar.vercel.sh/vercel?size=20) ![](https://avatar.vercel.sh/party?size=20) ![](https://avatar.vercel.sh/edge?size=20)
+# avatar ![](https://avatars.vocayo.ai/api/avatar/rauchg?size=20) ![](https://avatars.vocayo.ai/api/avatar/leerob?size=20) ![](https://avatars.vocayo.ai/api/avatar/vercel?size=20) ![](https://avatars.vocayo.ai/api/avatar/party?size=20) ![](https://avatars.vocayo.ai/api/avatar/edge?size=20)
 
 Generate beautiful gradient avatars for your application.
+
+Forked from [vercel/avatar](https://github.com/vercel/avatar) and converted to [next.js](https://nextjs.org) App Router
 
 ## Usage
 
