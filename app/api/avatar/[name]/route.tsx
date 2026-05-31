@@ -44,12 +44,17 @@ export async function GET(
           ry={rounded}
         />
         {fileType === 'svg' && !!text ? (
+          // `dy=".35em"` is the canonical SVG text-centering hack: place the
+          // baseline at y=50%, then shift it down by ~35% of the font size so
+          // the cap-height center of uppercase glyphs lands on the geometric
+          // middle. `dominantBaseline="central"` alone biases upward for
+          // letters without descenders (the central reference includes
+          // phantom descender space the H/HC/etc. don't use).
           <text
             x="50%"
             y="50%"
-            alignmentBaseline="central"
-            dominantBaseline="central"
             textAnchor="middle"
+            dy=".35em"
             fill="#fff"
             fontFamily="sans-serif"
             fontSize={(size * 0.9) / text.length}
@@ -62,8 +67,10 @@ export async function GET(
   )
 
   if (fileType === 'svg') {
+    // Same `dy=".35em"` centering trick as the JSX path above — see comment
+    // there for why the previous `dominant-baseline="central"` biased upward.
     const textElement = fileType === 'svg' && !!text
-      ? `<text x="50%" y="50%" alignment-baseline="central" dominant-baseline="central" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="${(size * 0.9) / text.length}">${text}</text>`
+      ? `<text x="50%" y="50%" text-anchor="middle" dy=".35em" fill="#fff" font-family="sans-serif" font-size="${(size * 0.9) / text.length}">${text}</text>`
       : ''
     
     const svgString = `<svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" version="1.1" xmlns="http://www.w3.org/2000/svg">
