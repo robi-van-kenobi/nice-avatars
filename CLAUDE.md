@@ -15,7 +15,7 @@ converted to the App Router. Deployed to Vercel and served in production at
 npm run dev            # dev server (Next.js + Turbopack) on http://localhost:3000
 npm run build          # production build
 npm run start          # serve the production build
-npm run lint           # next lint
+npm run lint           # ESLint 9 flat config (eslint.config.mjs); tests/ is not linted
 
 npm run test:e2e       # run Playwright e2e tests (trace on)
 npx playwright test tests/startpage.spec.ts   # run a single test file
