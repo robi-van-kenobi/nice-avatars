@@ -10,12 +10,12 @@ export default function Home() {
         <div style={{ display: 'flex', gap: 10, marginTop: '20px' }}>
           <img
             className={styles.avatar}
-            src="/api/avatar/vercel.svg?text=VC"
+            src="/vercel.svg?text=VC"
             alt="Vercel"
           />
-          <img className={styles.avatar} src="/api/avatar/42" alt="ID 42" />
-          <img className={styles.avatar} src="/api/avatar/satori" alt="Satori" />
-          <img className={styles.avatar} src="/api/avatar/next.js" alt="Next.js" />
+          <img className={styles.avatar} src="/42" alt="ID 42" />
+          <img className={styles.avatar} src="/satori" alt="Satori" />
+          <img className={styles.avatar} src="/next.js" alt="Next.js" />
         </div>
       </main>
 

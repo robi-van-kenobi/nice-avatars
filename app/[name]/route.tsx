@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og'
 import type { NextRequest } from 'next/server'
-import { generateGradient } from '../../../../utils/gradient'
+import { generateGradient } from '../../utils/gradient'
 
 export const runtime = 'edge'
 
@@ -72,7 +72,7 @@ export async function GET(
     const textElement = fileType === 'svg' && !!text
       ? `<text x="50%" y="50%" text-anchor="middle" dy=".35em" fill="#fff" font-family="sans-serif" font-size="${(size * 0.9) / text.length}">${text}</text>`
       : ''
-    
+
     const svgString = `<svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <g>
     <defs>
@@ -85,7 +85,7 @@ export async function GET(
     ${textElement}
   </g>
 </svg>`
-    
+
     return new Response(svgString, {
       headers: {
         'Content-Type': 'image/svg+xml',

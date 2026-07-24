@@ -30,10 +30,14 @@ There are no unit tests — the only test suite is Playwright e2e.
 
 The entire product is essentially one API route plus a demo landing page.
 
-- **`app/api/avatar/[name]/route.tsx`** — the core endpoint (`export const runtime = 'edge'`).
-  The `[name]` segment is parsed as `username.type` (e.g. `rauchg.svg`); the extension
-  after the dot selects the output format. Query params: `size` (default 600), `rounded`
-  (corner radius, default 0), and `text` (initials, **SVG output only**).
+- **`app/[name]/route.tsx`** — the core endpoint (`export const runtime = 'edge'`), served
+  at the root (`/:name`, e.g. `/rauchg.svg`). The `[name]` segment is parsed as
+  `username.type` (e.g. `rauchg.svg`); the extension after the dot selects the output
+  format. Query params: `size` (default 600), `rounded` (corner radius, default 0), and
+  `text` (initials, **SVG output only**). The legacy `/api/avatar/:name` path is
+  **deprecated** but still works — `next.config.ts` rewrites it to `/:name` so both hit
+  this same handler. The root `[name]` route coexists with the `/` index page
+  (`app/page.tsx`) and yields to static files in `public/`.
   - `.svg` requests are hand-serialized to an SVG string and returned with a
     long-lived immutable `Cache-Control` header.
   - Everything else is rendered to PNG via `next/og`'s `ImageResponse` (Satori).

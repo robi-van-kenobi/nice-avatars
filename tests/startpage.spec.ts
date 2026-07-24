@@ -16,6 +16,13 @@ test.describe('Startpage', () => {
   })
 
   test('should generate avatar with text and rounded corners', async ({ page }) => {
+    await page.goto('/playwright.svg?text=PW&size=200&rounded=20')
+    const avatar = page.locator('svg')
+    await expect(avatar).toBeVisible()
+    await expect(avatar).toContainText('PW')
+  })
+
+  test('deprecated /api/avatar/ alias still serves avatars', async ({ page }) => {
     await page.goto('/api/avatar/playwright.svg?text=PW&size=200&rounded=20')
     const avatar = page.locator('svg')
     await expect(avatar).toBeVisible()
