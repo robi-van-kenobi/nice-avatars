@@ -26,6 +26,6 @@
     "@playwright/test": "^1.62.1",
     "@types/tinycolor2": "^1.4.6",
     "eslint": "^10.9.1",
-    "eslint-config-next": "^16.3.2"
+    "eslint-config-next": "^16.3.3"
   }
 }
